@@ -7,6 +7,10 @@ This is a free lab script as you know - I also made a paid version, with much co
 I've made this script to my lib as well, so you have to download or convert this. Otherwise this is pretty much drag'n'drop :P
 Here's the link for my lib:
 https://github.com/Rovelt123/RO_Lib
+(MAKE SURE TO ENSURE RO_Lib before labscript)
+
+Then upload labs.sql to your database
+
 
 (I'd appreciate a like and feedback on my discord<3)
 Discord: https://discord.gg/Fx5tNnm3gr

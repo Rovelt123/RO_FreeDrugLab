@@ -127,3 +127,8 @@ RegisterServerEvent('ROVELT_FreeLabs:Server:EnterLab')
 AddEventHandler('ROVELT_FreeLabs:Server:EnterLab', function(id, entity)
     SetPlayerRoutingBucket(source, id)
 end)
+
+Citizen.CreateThread( function()
+    curVersion = LoadResourceFile(GetCurrentResourceName(), "version")
+    ROVELT.Functions.CheckUpdate(GetCurrentResourceName(), curVersion)
+end)
