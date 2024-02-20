@@ -15,8 +15,8 @@ if Config.Framework == "ESX" then
                         local TheItemMissing = Drug.amount[stage][k].. "x "..v
                         table.insert(missingItems, TheItemMissing)
                     else
-                        if not (xPlayer.getInventoryItem(v).count >= Drug.amount[stage][k]) then
-                            local TheItemMissing = (Drug.amount[stage][k] - xPlayer.getInventoryItem(v).count).. "x "..v
+                        if not (Player.getInventoryItem(v).count >= Drug.amount[stage][k]) then
+                            local TheItemMissing = (Drug.amount[stage][k] - Player.getInventoryItem(v).count).. "x "..v
                             table.insert(missingItems, TheItemMissing)
                         end
                     end
@@ -126,9 +126,4 @@ end)
 RegisterServerEvent('ROVELT_FreeLabs:Server:EnterLab')
 AddEventHandler('ROVELT_FreeLabs:Server:EnterLab', function(id, entity)
     SetPlayerRoutingBucket(source, id)
-end)
-
-Citizen.CreateThread( function()
-    curVersion = LoadResourceFile(GetCurrentResourceName(), "version")
-    ROVELT.Functions.CheckUpdate(GetCurrentResourceName(), curVersion)
 end)
